@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>NES Admin Panel</title>
+<style>
+body{margin:0;font:15px/1.6 system-ui,sans-serif;background:#f4f7fc;color:#1b2c47}
+.w{width:min(900px,94%);margin:auto;padding:20px 0 60px}h1{color:#14315f;font-size:1.5rem}
+.c{background:#fff;border:1px solid #dde7f1;border-radius:14px;padding:18px;margin-bottom:16px}
+input,textarea,select{width:100%;padding:9px 12px;border:1px solid #cfdbe8;border-radius:8px;font:inherit;margin:4px 0 10px}
+label{font-weight:700;font-size:.85rem}button{padding:10px 18px;border:0;border-radius:999px;background:#14315f;color:#fff;font-weight:700;cursor:pointer;margin:3px 4px 3px 0}
+button.s{background:#e8f3fb;color:#14315f}button.r{background:#c0392b}button.g{background:#1e8e4e}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px}.tabs button{background:#fff;color:#14315f;border:1px solid #dde7f1}.tabs button.on{background:#14315f;color:#fff}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;border-bottom:1px solid #eef2f7;padding:8px 0}#st{font-weight:700}
+</style></head><body><div class="w">
+<h1>NES Admin Panel</h1>
+<div class="c"><b>GitHub connection</b> (stored only in this browser)
+<label>Repository (owner/name)</label><input id="repo" placeholder="naraeducationalsociety/nes-website">
+<label>Branch</label><input id="branch" value="main">
+<label>Personal access token (repo / Contents: read &amp; write)</label><input id="tok" type="password">
+<button id="load">Load current data from GitHub</button> <button class="s" id="dl">Download data.js</button></div>
+<div id="app" class="c"></div>
+<div class="c"><button class="g" id="pub">Publish changes to website</button> <span id="st"></span><p style="margin:6px 0 0;color:#5d6f88;font-size:.85rem">Changes go live on the public site after GitHub Pages rebuilds (about 1 minute).</p></div>
+</div>
+<script src="data.js"></script>
+<script>
+const $=s=>document.querySelector(s);let D=JSON.parse(JSON.stringify(window.NES_DATA||{})),tab="settings",edit=-1,sha=null;
+const F={
+ settings:[["whatsapp","WhatsApp number (with country code)"],["whatsappGroup","WhatsApp group link"],["email","Email"],["location","Location"],["facebook","Facebook URL"],["youtube","YouTube URL"],["instagram","Instagram URL"]],
+ announcements:[["title","Title"],["text","Text","t"],["date","Date","d"]],
+ events:[["title","Title"],["date","Date","d"],["time","Time"],["venue","Venue"],["description","Description","t"],["link","Link (optional)"]],
+ opportunities:[["title","Title"],["category","Category","s"],["organization","Organization"],["deadline","Deadline","d"],["description","Description","t"],["link","Apply link"]],
+ news:[["title","Title"],["date","Date","d"],["text","Text","t"]],
+ team:[["name","Name"],["role","Role"],["bio","Short bio","t"],["photo","Photo URL (optional)"]],
+ programs:[["icon","Icon (emoji)"],["title","Title"],["text","Description","t"]]};
+const CATS=["Scholarship","Internship","Job","Training","Competition","Admission"];
+const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const inp=(f,v,id)=>f[2]=="t"?`<textarea id="${id}" rows="3">${esc(v)}</textarea>`:f[2]=="s"?`<select id="${id}">${CATS.map(c=>`<option ${c==v?"selected":""}>${c}</option>`).join("")}</select>`:`<input id="${id}" type="${f[2]=="d"?"date":"text"}" value="${esc(v)}">`;
+function draw(){
+ let h=`<div class="tabs">${Object.keys(F).map(k=>`<button class="${k==tab?"on":""}" onclick="tab='${k}';edit=-1;draw()">${k}</button>`).join("")}</div>`;
+ if(tab=="settings"){h+=F.settings.map((f,i)=>`<label>${f[1]}</label>`+inp(f,D.settings[f[0]],"f"+i)).join("")+`<button onclick="saveS()">Save settings</button>`}
+ else{const a=D[tab]=D[tab]||[];
+  if(edit>-2&&edit!==-1){const o=edit==a.length?{}:a[edit];h+=`<b>${edit==a.length?"Add new":"Edit"}</b>`+F[tab].map((f,i)=>`<label>${f[1]}</label>`+inp(f,o[f[0]],"f"+i)).join("")+`<button onclick="saveI()">Save</button><button class="s" onclick="edit=-1;draw()">Cancel</button>`}
+  else h+=`<button onclick="edit=${a.length};draw()">+ Add new</button>`+(a.length?a.map((o,i)=>`<div class="row"><span>${esc(o[F[tab][0][0]]||o[F[tab][1][0]]||"(untitled)")}</span><span><button class="s" onclick="edit=${i};draw()">Edit</button><button class="r" onclick="del(${i})">Delete</button></span></div>`).join(""):"<p>Nothing added yet.</p>")}
+ $("#app").innerHTML=h}
+function vals(){const o={};F[tab].forEach((f,i)=>o[f[0]]=$("#f"+i).value.trim());return o}
+function saveS(){D.settings=vals();msg("Settings saved. Press Publish.")}
+function saveI(){const o=vals();if(!o[F[tab][0][0]]&&!o[F[tab][1][0]])return alert("Please fill the title.");const a=D[tab];a[edit]=o;edit=-1;draw();msg("Saved. Press Publish.")}
+function del(i){if(confirm("Delete this item?")){D[tab].splice(i,1);draw();msg("Deleted. Press Publish.")}}
+function msg(t,e){$("#st").style.color=e?"#c0392b":"#1e8e4e";$("#st").textContent=t}
+const out=()=>"// Edited with NES Admin Panel\nwindow.NES_DATA = "+JSON.stringify(D,null,2)+";\n";
+const b64=s=>btoa(unescape(encodeURIComponent(s)));
+function cfg(){const r=$("#repo").value.trim(),t=$("#tok").value.trim(),b=$("#branch").value.trim()||"main";if(!/^[\w.-]+\/[\w.-]+$/.test(r)||!t){msg("Enter repository and token first.",1);return null}
+ localStorage.setItem("nes_admin",JSON.stringify({r,t,b}));return{u:`https://api.github.com/repos/${r}/contents/data.js`,b,h:{Authorization:"Bearer "+t,Accept:"application/vnd.github+json"}}}
+$("#load").onclick=async()=>{const c=cfg();if(!c)return;try{const r=await fetch(c.u+"?ref="+c.b,{headers:c.h});if(!r.ok)throw Error(r.status);const j=await r.json();sha=j.sha;
+ const t=decodeURIComponent(escape(atob(j.content.replace(/\n/g,""))));D=new Function("var window={};"+t+";return window.NES_DATA")();draw();msg("Loaded latest data.")}catch(e){msg("Could not load: "+e.message,1)}};
+$("#pub").onclick=async()=>{const c=cfg();if(!c)return;msg("Publishing...");try{
+ const g=await fetch(c.u+"?ref="+c.b,{headers:c.h});if(g.ok)sha=(await g.json()).sha;
+ const r=await fetch(c.u,{method:"PUT",headers:c.h,body:JSON.stringify({message:"Update website data",content:b64(out()),branch:c.b,sha:sha||undefined})});
+ if(!r.ok)throw Error((await r.json()).message||r.status);sha=(await r.json()).content.sha;msg("Published. Live in about a minute.")}catch(e){msg("Publish failed: "+e.message,1)}};
+$("#dl").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([out()],{type:"text/javascript"}));a.download="data.js";a.click()};
+try{const s=JSON.parse(localStorage.getItem("nes_admin")||"{}");if(s.r){$("#repo").value=s.r;$("#tok").value=s.t;$("#branch").value=s.b}}catch(e){}
+D.settings=D.settings||{};draw();
+</script></body></html>

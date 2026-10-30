@@ -1,0 +1,18 @@
+NARA EDUCATIONAL SOCIETY (NES) — YOUR WEBSITE
+
+1. Open index.html to see the homepage.
+2. Every main navigation section has its own separate HTML page.
+3. Open admin/index.html and choose LOCAL DESIGN PREVIEW to try editing events, programs, news, team members, etc. These edits are local to your browser only.
+4. To go live on GitHub Pages, extract this ZIP and upload the contents of the nes-website folder into a GitHub repository (index.html must be at the repository root). Enable GitHub Pages under repository Settings.
+5. FOR REAL, PERMANENT ONLINE ADMIN DATA AND APPLICATIONS:
+   a. Create a Supabase project.
+   b. Run supabase/schema.sql in the Supabase SQL Editor.
+   c. Create an Auth user and insert their UUID into public.admins using the SQL shown in README.md.
+   d. Enter the Project URL and PUBLIC publishable key in assets/js/config.js. Never enter a service_role/secret key.
+   e. Upload the updated assets/js/config.js to your live website.
+6. Then log into admin/index.html, set your contact information, and publish actual events and team members.
+
+The website does not contain fictitious officeholders, events, registration counts, or achievements.
+Review the proposed vision/mission, programs and privacy terms with NES leaders before official publication.
+
+For full technical instructions see README.md.

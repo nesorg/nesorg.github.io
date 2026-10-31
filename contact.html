@@ -9,7 +9,7 @@
 <meta name="author" content="Nara Educational Society">
 <meta name="geo.region" content="PK-SD">
 <meta name="geo.placename" content="Nara, Sindh, Pakistan">
-<meta name="theme-color" content="#0a2e6e">
+<meta name="theme-color" content="#2e1065">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nara Educational Society">
 <meta property="og:title" content="Contact Us | Nara Educational Society">
@@ -23,10 +23,15 @@
 <style>
 /* Nara Educational Society — design follows the SALU Community layout language */
 :root{
-  --blue-950:#061e47;--blue-900:#0a2e6e;--blue-800:#0f3f96;--blue-700:#1552be;--blue-600:#1d64df;--blue-500:#2b76f5;
-  --blue-200:#c3dafd;--blue-150:#d9e8ff;--blue-100:#eaf2ff;--blue-50:#f4f8ff;
-  --sky:#3aa0e0;--white:#fff;--ink:#072252;--mute:#2e4d82;--wa:#25d366;--wa-d:#128c7e;
-  --shadow:0 10px 28px rgba(10,46,110,.08);--shadow-lg:0 16px 40px rgba(10,46,110,.15);
+  --blue-950:#150a33;--blue-900:#2e1065;--blue-800:#4c1d95;--blue-700:#6d28d9;--blue-600:#7c3aed;--blue-500:#a78bfa;
+  --blue-200:#e0d4fb;--blue-150:#ece4fd;--blue-100:#f4efff;--blue-50:#faf8ff;
+  --green:#10b981;--green-d:#047857;--green-l:#d1fae5;
+  --sky:#10b981;--white:#fff;--ink:#1b1235;--mute:#5a4d7c;--wa:#25d366;--wa-d:#128c7e;
+  --grad:linear-gradient(135deg,#7c3aed 0%,#a855f7 42%,#10b981 100%);
+  --grad-deep:linear-gradient(125deg,#150a33 0%,#3b1585 48%,#065f46 100%);
+  --stroke:linear-gradient(135deg,#c4b5fd,#6ee7b7);
+  --stroke-hot:linear-gradient(135deg,#7c3aed,#10b981);
+  --shadow:0 10px 28px rgba(46,16,101,.09);--shadow-lg:0 16px 40px rgba(46,16,101,.2);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -39,7 +44,7 @@ a:hover{color:var(--blue-900)}
 .skip:focus{left:8px}
 
 /* Header */
-.site-header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--blue-200);box-shadow:0 4px 18px rgba(10,46,110,.07)}
+.site-header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--blue-200);box-shadow:0 4px 18px rgba(46,16,101,.07)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1240px;margin:0 auto;padding:8px 18px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;color:var(--blue-900);white-space:nowrap;line-height:1.15}
 .brand b{color:var(--blue-600)}
@@ -50,14 +55,14 @@ a:hover{color:var(--blue-900)}
 .top-nav{display:flex;align-items:center;gap:2px;flex:1;justify-content:flex-end}
 .top-nav a{display:inline-flex;align-items:center;padding:8px 11px;border-radius:10px;color:var(--blue-900);font-size:13.5px;font-weight:700;white-space:nowrap;transition:all .2s}
 .top-nav a:hover{background:var(--blue-100);color:var(--blue-700)}
-.top-nav a.on{background:var(--blue-700);color:#fff;box-shadow:0 4px 12px rgba(21,82,190,.24)}
+.top-nav a.on{background:var(--blue-700);color:#fff;box-shadow:0 4px 12px rgba(109,40,217,.24)}
 .hdr-icons{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .ib{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;background:var(--blue-100);color:var(--blue-700);border:1px solid var(--blue-200);transition:all .2s;cursor:pointer}
 .ib:hover{background:var(--blue-700);color:#fff;transform:translateY(-2px)}
 .ib svg{width:19px;height:19px;fill:currentColor}
 .ib.wa{background:#e8fbf0;border-color:#b6ecce;color:var(--wa-d)}
 .ib.wa:hover{background:var(--wa);color:#fff}
-.menubtn{display:none;align-items:center;gap:8px;border:0;font:inherit;font-weight:700;font-size:14px;background:var(--blue-800);color:#fff;padding:9px 15px;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(15,63,150,.2)}
+.menubtn{display:none;align-items:center;gap:8px;border:0;font:inherit;font-weight:700;font-size:14px;background:var(--blue-800);color:#fff;padding:9px 15px;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(76,29,149,.2)}
 .menubtn svg{width:19px;height:19px;fill:currentColor}
 #panel{display:none;max-width:1240px;margin:0 auto;padding:14px 18px 18px;background:#fff;border-top:1px solid var(--blue-200);border-bottom:3px solid var(--blue-700);box-shadow:var(--shadow-lg)}
 #panel.open{display:block;animation:fadeUp .25s ease both}
@@ -67,7 +72,7 @@ a:hover{color:var(--blue-900)}
 #panel a:hover{background:var(--blue-50);border-color:var(--blue-200)}
 #panel a.on{background:var(--blue-700);color:#fff}
 #panel a.on svg{stroke:#fff}
-@media(max-width:1020px){.top-nav{display:none}.menubtn{display:inline-flex}.hdr-icons{margin-left:auto}}
+@media(max-width:1180px){.top-nav{display:none}.menubtn{display:inline-flex}.hdr-icons{margin-left:auto}}
 @media(max-width:480px){.menubtn span{display:none}.menubtn{padding:9px 12px}.brand small{display:none}}
 
 /* Ticker */
@@ -105,9 +110,9 @@ main>section,main>div{animation:fadeUp .35s ease both}
 .hero-logo{background:#fff;border-radius:20px;padding:14px;box-shadow:0 14px 34px rgba(0,0,0,.25);justify-self:center;max-width:320px;width:100%}
 .hero-logo img{width:100%;height:auto;border-radius:12px}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:10px 18px;border-radius:12px;background:var(--blue-700);color:#fff;box-shadow:0 6px 16px rgba(21,82,190,.2);transition:all .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;font-size:14px;padding:10px 18px;border-radius:12px;background:var(--blue-700);color:#fff;box-shadow:0 6px 16px rgba(109,40,217,.2);transition:all .2s}
 .btn:hover{background:var(--blue-900);color:#fff;transform:translateY(-2px)}
-.btn.alt{background:#fff;color:var(--blue-800);border-color:var(--blue-200);box-shadow:0 2px 8px rgba(10,46,110,.07)}
+.btn.alt{background:#fff;color:var(--blue-800);border-color:var(--blue-200);box-shadow:0 2px 8px rgba(46,16,101,.07)}
 .btn.alt:hover{background:var(--blue-100);border-color:var(--blue-600);color:var(--blue-900)}
 .btn.wa{background:var(--wa-d);border-color:var(--wa-d)}
 .btn.wa:hover{background:#0b6b5f}
@@ -130,7 +135,7 @@ h3{font-size:17px;color:var(--blue-900);margin-bottom:6px;font-weight:700}
 .sec-link{font-weight:700;font-size:14px}
 .card,.tile,.person,.ann,.note,.cc{background:#fff;border:1.5px solid var(--blue-200);border-radius:16px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s}
 .card{padding:22px}
-.card:hover,.person:hover,.ann:hover,.cc:hover{border-color:var(--blue-600);box-shadow:0 12px 26px rgba(15,63,150,.13)}
+.card:hover,.person:hover,.ann:hover,.cc:hover{border-color:var(--blue-600);box-shadow:0 12px 26px rgba(76,29,149,.13)}
 .card p,.tile p{color:var(--mute);font-size:14.5px}
 .card p+p{margin-top:10px}
 .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
@@ -208,7 +213,7 @@ h3{font-size:17px;color:var(--blue-900);margin-bottom:6px;font-weight:700}
 .g-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .g-item img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
 .g-item.logo img{object-fit:contain;padding:18px;background:#fff}
-.g-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(to top,rgba(6,30,71,.92),transparent);color:#fff;font-size:13px;font-weight:700}
+.g-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;background:linear-gradient(to top,rgba(21,10,51,.92),transparent);color:#fff;font-size:13px;font-weight:700}
 .g-cap small{display:block;font-weight:600;opacity:.85;font-size:11.5px}
 .g-item.soon{cursor:default;background:linear-gradient(145deg,var(--blue-100),#fff);border-style:dashed;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:18px;color:var(--mute)}
 .g-item.soon:hover{transform:none;box-shadow:var(--shadow)}
@@ -216,7 +221,7 @@ h3{font-size:17px;color:var(--blue-900);margin-bottom:6px;font-weight:700}
 .g-item.soon b{color:var(--blue-900);font-size:15px}
 .g-item.soon span{font-size:12.5px}
 .g-item[hidden]{display:none}
-.lb{position:fixed;inset:0;z-index:300;background:rgba(6,30,71,.93);display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(21,10,51,.93);display:none;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:12px}
 .lb.open{display:flex;animation:fadeUp .2s ease both}
 .lb img{max-height:78vh;max-width:min(92vw,900px);border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#fff;object-fit:contain}
 .lb p{color:#fff;font-weight:700;text-align:center}
@@ -279,12 +284,12 @@ footer a:hover{color:#fff;text-decoration:underline}
 .footer-bottom{margin-top:22px;padding-top:14px;border-top:1px solid rgba(255,255,255,.2);font-size:13px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
 
 /* WhatsApp floating button + popup */
-.wa-fab{position:fixed;right:18px;bottom:18px;z-index:250;width:62px;height:62px;border-radius:50%;border:0;background:var(--wa);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 26px rgba(18,140,126,.5);animation:fabPulse 2.4s infinite}
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:250;width:62px;height:62px;border-radius:50%;border:0;background:var(--wa);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 26px rgba(124,58,237,.5);animation:fabPulse 2.4s infinite}
 .wa-fab svg{width:34px;height:34px;fill:#fff}
 .wa-fab:hover{transform:scale(1.07)}
 .wa-fab .badge{position:absolute;top:-2px;right:-2px;width:20px;height:20px;border-radius:50%;background:#ef4444;color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center;border:2px solid #fff}
-@keyframes fabPulse{0%{box-shadow:0 10px 26px rgba(18,140,126,.5),0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 10px 26px rgba(18,140,126,.5),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 10px 26px rgba(18,140,126,.5),0 0 0 0 rgba(37,211,102,0)}}
-.wa-pop{position:fixed;right:18px;bottom:92px;z-index:251;width:min(350px,calc(100vw - 36px));background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(6,30,71,.35);overflow:hidden;transform:translateY(16px) scale(.96);opacity:0;visibility:hidden;transform-origin:bottom right;transition:all .28s cubic-bezier(.22,1,.36,1)}
+@keyframes fabPulse{0%{box-shadow:0 10px 26px rgba(124,58,237,.5),0 0 0 0 rgba(16,185,129,.55)}70%{box-shadow:0 10px 26px rgba(124,58,237,.5),0 0 0 16px rgba(16,185,129,0)}100%{box-shadow:0 10px 26px rgba(124,58,237,.5),0 0 0 0 rgba(16,185,129,0)}}
+.wa-pop{position:fixed;right:18px;bottom:92px;z-index:251;width:min(350px,calc(100vw - 36px));background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(21,10,51,.35);overflow:hidden;transform:translateY(16px) scale(.96);opacity:0;visibility:hidden;transform-origin:bottom right;transition:all .28s cubic-bezier(.22,1,.36,1)}
 .wa-pop.open{transform:none;opacity:1;visibility:visible}
 .wa-head{background:linear-gradient(135deg,#075e54,#128c7e);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
 .wa-head img{width:46px;height:46px;border-radius:50%;background:#fff;object-fit:contain;flex-shrink:0}
@@ -304,6 +309,143 @@ footer a:hover{color:#fff;text-decoration:underline}
 .wa-num{text-align:center;font-size:12.5px;color:var(--mute)}
 @media(max-width:480px){.btns .btn{width:100%}.ev-top h3{font-size:17px}}
 
+
+/* ===== Premium green + purple theme ===== */
+body{background:linear-gradient(180deg,#faf8ff 0%,#f3fbf7 100%) fixed}
+.site-header{border-bottom:3px solid transparent;border-image:var(--stroke-hot) 1}
+.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top-nav a.on,.btn,.menubtn,.ticker-label,.pill.solid{background:var(--grad)}
+.top-nav a.on{box-shadow:0 4px 14px rgba(124,58,237,.35)}
+.btn{border-color:transparent}
+.btn:hover{background:var(--grad);filter:brightness(1.08) saturate(1.1);color:#fff}
+.btn.alt{background:#fff;color:var(--blue-800);border-color:var(--blue-200)}
+.btn.alt:hover{background:var(--blue-100);filter:none;color:var(--blue-900);border-color:var(--blue-600)}
+.btn.wa{background:linear-gradient(135deg,#128c7e,#25d366);color:#fff}
+.btn.sup{background:linear-gradient(135deg,#a855f7,#10b981);color:#fff}
+.ico.st{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hero .btn{background:#fff;color:var(--blue-900)}
+.hero .btn:hover{background:#f4efff;filter:none;color:var(--blue-900)}
+.hero .btn.alt{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.45)}
+.hero .btn.sup{background:linear-gradient(135deg,#a855f7,#10b981);color:#fff;border-color:rgba(255,255,255,.5)}
+.hero .btn.sup:hover{background:linear-gradient(135deg,#a855f7,#10b981);filter:brightness(1.1)}
+.hero{background:var(--grad-deep);border:2px solid transparent;background-clip:padding-box;box-shadow:0 0 0 2px rgba(167,139,250,.55),var(--shadow-lg)}
+.hero::after{background:radial-gradient(circle,rgba(16,185,129,.4),transparent 70%);width:340px;height:340px}
+.hero::before{content:"";position:absolute;left:-80px;bottom:-110px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.45),transparent 70%);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .lead{color:#e9defd}
+.dot{background:#6ee7b7}
+.eyebrow{background:rgba(255,255,255,.12);border-color:rgba(167,243,208,.5)}
+.sec{border-bottom:0;padding-bottom:12px;background:linear-gradient(90deg,#7c3aed,#10b981 55%,rgba(16,185,129,0)) bottom/100% 3px no-repeat}
+.card,.person,.ann,.cc,.tile{border:1.5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--stroke) border-box}
+.card:hover,.person:hover,.ann:hover,.cc:hover{border-color:transparent;background:linear-gradient(#fff,#fff) padding-box,var(--stroke-hot) border-box;box-shadow:0 14px 30px rgba(109,40,217,.16)}
+.note{background:linear-gradient(135deg,#f4efff,#ecfdf5);border-color:var(--blue-200)}
+.pill{background:linear-gradient(135deg,#f4efff,#ecfdf5);border-color:#d9ccfa;color:var(--blue-800)}
+.pill.solid{color:#fff;border-color:transparent}
+.ticks li::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/13px no-repeat,var(--grad)}
+.step::before{background:var(--grad)}
+.tile-icon{background:linear-gradient(135deg,var(--ic,#7c3aed),color-mix(in srgb,var(--ic,#7c3aed) 55%,#000))}
+.ticker-label{background:var(--grad)}
+.ticker-in{border-color:transparent;background:linear-gradient(#fff,#fff) padding-box,var(--stroke) border-box}
+.ticker-item b{color:var(--blue-600)}
+.browse{background:var(--grad-deep);border:1.5px solid rgba(167,139,250,.6)}
+.browse .tile{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.28)}
+.ev-top{background:var(--grad-deep)}
+.cta{background:var(--grad-deep);border:2px solid transparent;background-clip:padding-box;box-shadow:0 0 0 2px rgba(167,139,250,.5),var(--shadow-lg);position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.4),transparent 70%)}
+.cta>*{position:relative;z-index:1}
+.cta p{color:#e9defd}
+.cta .btn{background:#fff;color:var(--blue-900)}
+.cta .btn.wa{background:linear-gradient(135deg,#a855f7,#10b981);color:#fff}
+footer .glass{background:var(--grad-deep);border:1.5px solid rgba(167,139,250,.5);color:#e9defd}
+footer a{color:#d9ccfa}
+.footer-social a{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25)}
+.footer-social a:hover{background:var(--grad)}
+.chip{border-color:var(--blue-200)}
+.chip.on{background:var(--grad);border-color:transparent}
+input:focus,textarea:focus,select:focus{border-color:var(--blue-600);box-shadow:0 0 0 3px rgba(124,58,237,.15)}
+.ph{border:4px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#a855f7,#10b981) border-box;box-shadow:0 10px 24px rgba(109,40,217,.25)}
+.g-item{border-color:transparent;background:linear-gradient(#fff,#fff) padding-box,var(--stroke) border-box}
+.g-item.soon{background:linear-gradient(145deg,#f4efff,#ecfdf5);border:1.5px dashed #c4b5fd}
+.g-item.soon svg{stroke:var(--blue-600)}
+.g-cap{background:linear-gradient(to top,rgba(21,10,51,.92),transparent)}
+.lb{background:rgba(21,10,51,.94)}
+
+/* Header: join + support */
+.join-btn{background:var(--grad);color:#fff;font-weight:800;font-size:14px;padding:9px 18px;border-radius:99px;box-shadow:0 6px 16px rgba(124,58,237,.3);white-space:nowrap;transition:transform .2s,filter .2s}
+.join-btn:hover{color:#fff;transform:translateY(-2px);filter:brightness(1.1)}
+.ib.sup{background:linear-gradient(135deg,#a855f7,#10b981);border-color:transparent;color:#fff;animation:beat 2.6s infinite}
+.ib.sup:hover{background:linear-gradient(135deg,#a855f7,#10b981);filter:brightness(1.12)}
+.ib.sup svg{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;width:21px;height:21px}
+@keyframes beat{0%,100%{transform:scale(1)}8%{transform:scale(1.12)}16%{transform:scale(1)}24%{transform:scale(1.08)}32%{transform:scale(1)}}
+@media(max-width:560px){.join-btn{display:none}}
+.more{position:relative}
+.more summary{list-style:none;cursor:pointer;padding:8px 11px;border-radius:10px;color:var(--blue-900);font-size:13.5px;font-weight:700;display:inline-flex;gap:5px;align-items:center}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"\25BE";font-size:11px}
+.more summary:hover,.more[open] summary{background:var(--blue-100);color:var(--blue-700)}
+.more summary.on{background:var(--grad);color:#fff}
+.more-menu{position:absolute;right:0;top:calc(100% + 10px);z-index:130;min-width:210px;display:grid;gap:2px;padding:8px;background:#fff;border:1.5px solid transparent;border-radius:14px;background:linear-gradient(#fff,#fff) padding-box,var(--stroke-hot) border-box;box-shadow:var(--shadow-lg)}
+.top-nav .more-menu a{padding:10px 12px;border-radius:9px}
+
+/* Mobile menu: one single list */
+#panel{border-bottom:3px solid transparent;border-image:var(--stroke-hot) 1;max-height:78vh;overflow-y:auto}
+#panel .pg{grid-template-columns:1fr;gap:4px}
+#panel a.on{background:var(--grad)}
+#panel a svg{stroke:var(--blue-600)}
+
+/* Hero organisation image panel */
+.hero-org{justify-self:center;width:100%;max-width:400px;padding:18px 16px 14px;border-radius:22px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.org-title{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px}
+.org-title svg{width:18px;height:18px;stroke:#6ee7b7;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.org-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.org-trio figure{text-align:center}
+.org-trio img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#c4b5fd,#6ee7b7) border-box;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.org-trio figcaption{margin-top:8px;line-height:1.25}
+.org-trio b{display:block;font-size:12.5px}
+.org-trio span{display:block;font-size:11px;color:#c9f5e0;font-weight:700}
+.org-foot{margin-top:14px;text-align:center;font-size:12px;color:#e0d4fb;font-weight:600}
+
+/* Area / program cards */
+.areas{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.area{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;color:inherit}
+.area:hover{transform:translateY(-3px)}
+.area .tile-icon,.prog .tile-icon,.card>.tile-icon{width:56px;height:56px;border-radius:16px;margin-bottom:8px}
+.area .tile-icon svg,.prog .tile-icon svg,.card>.tile-icon svg{width:27px;height:27px}
+.area p{color:var(--mute);font-size:14px}
+.prog .ticks{margin-top:12px}
+
+/* Centered layouts */
+.spot,.bio{grid-template-columns:1fr;justify-items:center;text-align:center;gap:16px}
+.spot .ph,.bio .ph{width:220px;height:220px;margin:0 auto}
+.spot .btns,.bio .btns{justify-content:center}
+.spot>div,.bio>div{max-width:70ch;display:flex;flex-direction:column;align-items:center}
+.contact-card{grid-template-columns:1fr;justify-items:center;text-align:center;background:var(--grad-deep);border:2px solid transparent;background-clip:padding-box;box-shadow:0 0 0 2px rgba(167,139,250,.55),var(--shadow-lg);padding:30px 22px}
+.contact-card>div{display:flex;flex-direction:column;align-items:center}
+.contact-card .btns{justify-content:center}
+.contact-card .lines{justify-items:center}
+.contact-card img{margin:0 auto;width:120px;height:120px}
+.contact-card p{color:#e0d4fb}
+.cc{align-items:center;text-align:center}
+.cc .go{color:var(--blue-600)}
+.cta{text-align:left}
+@media(max-width:640px){.cta{justify-content:center;text-align:center}.cta .btns{justify-content:center}}
+
+/* Support / Donate floating button */
+.wa-fab{width:auto;height:58px;padding:0 20px 0 16px;border-radius:99px;gap:10px;display:flex;align-items:center;background:var(--grad);box-shadow:0 12px 28px rgba(124,58,237,.5);animation:fabPulse 2.4s infinite}
+.wa-fab svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fab-label{font-weight:800;font-size:14.5px;color:#fff;white-space:nowrap}
+@media(max-width:600px){.wa-fab{width:60px;height:60px;padding:0;justify-content:center}.fab-label{display:none}}
+.wa-fab .badge{top:-3px;right:-3px}
+.wa-head{background:linear-gradient(135deg,#2e1065,#047857)}
+.wa-body{background:#f1ecff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='4' cy='4' r='1.4' fill='%23d9ccfa'/%3E%3C/svg%3E")}
+.wa-msg b{color:var(--green-d)}
+.wa-go{background:linear-gradient(135deg,#25d366,#10b981);color:#04361f}
+.wa-go:hover{background:linear-gradient(135deg,#25d366,#10b981);filter:brightness(1.07)}
+.wa-go svg{fill:#04361f}
+.wa-pop{border:1.5px solid #d9ccfa}
+.wa-num a{color:var(--blue-700)}
+.org-trio img{height:auto}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NGO", "name": "Nara Educational Society", "alternateName": "NES", "description": "A community-driven non-profit working to raise educational standards and confidence among youth in the Nara desert area of Sindh, Pakistan.", "slogan": "Education builds a brighter future", "email": "naraedusociety@gmail.com", "telephone": "+923013467491", "address": {"@type": "PostalAddress", "addressLocality": "Nara", "addressRegion": "Sindh", "addressCountry": "PK"}, "areaServed": "Nara, Sindh, Pakistan"}</script>
 </head><body>
@@ -314,15 +456,16 @@ footer a:hover{color:#fff;text-decoration:underline}
       <span class="mark"><img src="data:image/webp;base64,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" alt="Nara Educational Society emblem" width="96" height="96"></span>
       <span>Nara <b>Educational</b> Society<small>Education builds a brighter future</small></span>
     </a>
-    <nav class="top-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="gallery.html">Gallery</a><a href="partnership.html">Partnership</a><a href="contact.html" class=on aria-current=page>Contact Us</a></nav>
+    <nav class="top-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="programs.html">Programs</a><a href="events.html">Events</a><a href="team.html">Team</a><a href="gallery.html">Gallery</a><a href="contact.html" class=on aria-current=page>Contact Us</a><details class="more"><summary>More</summary><div class="more-menu"><a href="announcements.html">Announcements</a><a href="ambassadors.html">Ambassadors</a><a href="opportunities.html">Opportunities</a><a href="partnership.html">Partnership</a></div></details></nav>
     <div class="hdr-icons">
-      <a class="ib wa" href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <a class="join-btn" href="join.html">Join NES</a>
+      <a class="ib sup" href="https://wa.me/923013467491?text=Assalam%20o%20Alaikum%21%20I%20would%20like%20to%20support%20/%20donate%20to%20Nara%20Educational%20Society." target="_blank" rel="noopener noreferrer" aria-label="Support or donate (opens WhatsApp)" title="Support / Donate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg></a>
       <button class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="panel" aria-label="Open menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2.2H3zM3 11h18v2.2H3zM3 16h18v2.2H3z"/></svg><span>Menu</span>
       </button>
     </div>
   </div>
-  <div id="panel" aria-label="All pages"><div class="pg"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-10.5z"/></svg><span>Home</span></a><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>About Us</span></a><a href="team.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Team</span></a><a href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Events</span></a><a href="announcements.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Announcements</span></a><a href="gallery.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Gallery</span></a><a href="partnership.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Partnership</span></a><a href="contact.html" class=on><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Contact Us</span></a></div></div>
+  <div id="panel" aria-label="All pages"><div class="pg"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-10.5z"/></svg><span>Home</span></a><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>About Us</span></a><a href="programs.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12.5v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg><span>Programs</span></a><a href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Events</span></a><a href="team.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Team</span></a><a href="announcements.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Announcements</span></a><a href="gallery.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Gallery</span></a><a href="ambassadors.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Ambassadors</span></a><a href="opportunities.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Opportunities</span></a><a href="partnership.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Partnership</span></a><a href="join.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg><span>Join NES</span></a><a href="donate.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg><span>Donate / Support</span></a><a href="contact.html" class=on><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Contact Us</span></a></div></div>
 </header>
 <div class="ticker">
   <div class="ticker-in">
@@ -365,12 +508,12 @@ footer a:hover{color:#fff;text-decoration:underline}
 
 <div class="sec"><div><h2>Send us a message</h2><p class=sub>Fill in the form and choose how to send it: WhatsApp or email.</p></div></div>
 
-<form class="card" id="contactForm" novalidate>
-  <div class="row"><label>Your name<input name="name" required autocomplete="name" placeholder="Full name"></label>
-  <label>Phone / WhatsApp<input name="phone" type="tel" autocomplete="tel" placeholder="03XX XXXXXXX"></label></div>
-  <label>Topic<select name="topic"><option>General enquiry</option><option>NES Tests</option><option>Events &amp; competitions</option><option>Partnership</option><option>Volunteering</option><option>Media / photos</option></select></label>
-  <label>Message<textarea name="message" required placeholder="Write your message here..."></textarea></label>
-  <div class="btns"><button class="btn wa" type="button" id="sendWa"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Send on WhatsApp</button><button class="btn" type="button" id="sendMail">Send by Email</button></div>
+<form class="card" id="contactForm" data-compose="NES enquiry" novalidate>
+  <div class="row"><label>Your name<input name="Name" required autocomplete="name" placeholder="Full name"></label>
+  <label>Phone / WhatsApp<input name="Phone" type="tel" autocomplete="tel" placeholder="03XX XXXXXXX"></label></div>
+  <label>Topic<select name="Topic"><option>General enquiry</option><option>NES Tests</option><option>Events &amp; competitions</option><option>Partnership</option><option>Volunteering</option><option>Media / photos</option></select></label>
+  <label>Message<textarea name="Message" required placeholder="Write your message here..."></textarea></label>
+  <div class="btns"><button class="btn wa" type="button" data-send="wa"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Send on WhatsApp</button><button class="btn" type="button" data-send="mail">Send by Email</button></div>
   <p class="hint">This form opens WhatsApp or your email app with your message ready to send. Nothing is stored on this website.</p>
 </form>
 </main>
@@ -380,8 +523,8 @@ footer a:hover{color:#fff;text-decoration:underline}
     <div class="foot-brand"><img src="data:image/webp;base64,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" alt="" width="112" height="112"><div><b>Nara Educational Society</b><br><span>Education builds a brighter future.</span></div></div>
     <p style="font-size:14px;margin-top:6px">A local, community-driven non-profit working to raise educational standards and confidence among the youth of the Nara desert, Sindh, Pakistan.</p>
     <div class="footer-columns">
-      <section><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li></ul></section>
-      <section><h3>More</h3><ul><li><a href="announcements.html">Announcements</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="partnership.html">Partnership</a></li><li><a href="contact.html">Contact Us</a></li></ul></section>
+      <section><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="events.html">Events</a></li><li><a href="team.html">Team</a></li></ul></section>
+      <section><h3>More</h3><ul><li><a href="announcements.html">Announcements</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="ambassadors.html">Ambassadors</a></li><li><a href="opportunities.html">Opportunities</a></li><li><a href="partnership.html">Partnership</a></li><li><a href="join.html">Join NES</a></li><li><a href="donate.html">Donate / Support</a></li><li><a href="contact.html">Contact Us</a></li></ul></section>
       <section><h3>Contact Information</h3>
         <div class="footer-contact">
           <a href="tel:+923013467491">&#9742; 0301 3467491</a>
@@ -398,17 +541,17 @@ footer a:hover{color:#fff;text-decoration:underline}
   </div>
 </footer>
 
-<button class="wa-fab" id="waFab" aria-label="Chat with Nara Educational Society on WhatsApp" aria-expanded="false" aria-controls="waPop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="badge">1</span></button>
-<div class="wa-pop" id="waPop" role="dialog" aria-label="WhatsApp chat">
-  <div class="wa-head"><img src="data:image/webp;base64,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" alt="" width="92" height="92"><div><b>Nara Educational Society</b><small>Typically replies within a day</small></div><button class="wa-x" aria-label="Close chat">&times;</button></div>
+<button class="wa-fab" id="waFab" aria-label="Support or donate to Nara Educational Society" aria-expanded="false" aria-controls="waPop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 15 6 6"/><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></svg><span class="fab-label">Support / Donate</span><span class="badge">1</span></button>
+<div class="wa-pop" id="waPop" role="dialog" aria-label="Support Nara Educational Society">
+  <div class="wa-head"><img src="data:image/webp;base64,UklGRsYKAABXRUJQVlA4ILoKAADQLQCdASqCAIIAPmEsk0akIqGhJ/WZ2IAMCWIA1xP+0I9QH1fkI6MYqHbznI/vfqA/QnsAfqz5xfqL/bL1B/uR+1XvyehD/AeoB/d+oJ9ADy3vZK/sf/P9LT//5xn2H/4Xw/8cXpf2t5asRf5R99f2f5c+r/+w+yD0r+JP9j6gX43/Jv8D+V/BHWT/2nqEezf0L/Vflp/dfoPmO99NZFoAfnn/eeoT/4f57z4/SH/p9xH+df2b/k+t37KvR9/bcsN+0+9mui8Cnszohf8v9QtXm/4aepVnoWpE0JV2vo1K8O2Zv5AV6QMwYdAE9lHF3wl3TOsPzfEuUGRMWiQQRZStuSlcLSiv6Odd2o5hQCfxbADwdE5D8HhFPwAKHt78ndpZg1RvjB7ibX+AQ8I1o0d25m4tGI3Y2YAMgnOAlW/zG+V956/t3d1RxqVG4u7GlPJuhDsu8+/1Kp9LtBoNHIeU+q8VkGdATB2URy3i4aNs8q662bXsbAAA/vz0AAAIuT/xncdt//jF2BNbHPcb6W9mfvDtJ66aYyKTJwEoVPe6kxDdgS2VS5s1jMKuE39ZKQ0ETFObz8BGr6kgcHvzS8KRdcln12t1364ukjCro88z1BCyr3mWl8TwK7LVukocLTO0d+QyfbBoJ/+kmxd99KVVvd49aFSG3EpG/uaN/U3jlTomGeUSj7hp2z+MXdivarMc0+MOqqmc8QEoE6cLAxcc+NzeX2ymOJh0GmcF5TaOBYKdyomldyDLOWaPvuxTNBseEfJVTKV13dh+IeMSdMp5Xzb18gY1ElnnQkNTfSckvXMKx/9d57nYSalY1JzKLXoizwg/raHH8x9RuDy8I4sfD5a+2cwudXi+i3yY6x00QuwLsEugBQVNrW+62re9FmSXd3SHn+f5bQkEF7xjVNYKRohDA4zXYTFXRC4D0zTrEaBsD4MD8EwHS/z25nEbS62ZKhs5sfXG3zSbMZZKOOKAmb1Jwhjea6XyWFhfNWuLNygpIK3sNjIAhh8sAesrKTmZ5zXg4X1atDryclAn1x6fYWNc9z4Ef8IlJmjFP7aKqoBgoACFqmtayu5edZKY8T9yxMoXVJk8f4ffluhG6rM2pexHuNLZsDHJbU1a13beD8jOJMDy5qoZfvcLu/5ScfdNUmmJNKuMDSQEZqNS3+cGduzj0IeW61otT52e37JDiCw2IGVTmpmi5b/LgqWO4fIabAJ6wokxVzlAm+twqYmzflhY2NCltfBJ7v7vdFFNTxBDkpUHf83yQfL3PrwU5rxQC31ebfuPXWZRTZxUbPIpaJQyJt03Kg7B/tUUh/Nvwv6P9y4dbxXHuvZ4YiUNgma4roDNeq8VNp2ehzB1P/O0GUecJGaZYgD099wTDhWUpZ+QdpbrGaiceMnsv59bsLkLInYQ5MGE+4i2Ne0UO/WHd75lQlt/waGZjJ6AcO1nvD7ArgR9yCbH9B7jKU8Ql+CQKva54/MVHyolxzJEG2Y6jVYtjEp4L73Zs8zp4+jj0/V1tUNqpS8diIk2vDAuo7wKQTudTF/mmnVDYdJRS1QBU4uKRbkWiD31yQ5munOGFDTWrctngNOE5KV7D1FdlIKtnvLhqPdrnDFVGoomc2dpIoXz2I5TfNGbNsVC9PY3ygpfQ6kMH9CVU6CmoFOPPsr1PKaDkehLaclczM8x5a05J9cV5BIBqQ2e4xGIHP4Vd33x/PMlMK2ZurRiGcWtGOu7ft73/Yt3qgnn97fuQlOZLRJCPH+/14CC/qhmVzr/sWhQ6i4rhcFINEKaFRDzZm+vJV5mwWeUKcj/rzxVKn+d6rr1IU6UJ/aiuVU9SxHtjAIWnLtSwlUFPAFuUCaHlpWgeEhjSZW1yb34eMK/yaZX8V2S7dCHeNdRDkdMqf3wYT9CAvxLjvwLLtmzZmkwMy0BEJfdqFwdaWoJ2OygUEXE3L8PiMM6ahCw/of7CD+QeFZMTHKfoGoKstR5cMdpLGdXpvx449pNj1Yu8eiM8JH/03kFXOV9VMVtvS8Kuk563o+LBgHJtFXVmgkpl+7HAl/lDUQprw26T7bp3iWABw9CeVfKtuvlGGoFiCH/4BWOPElZvyZkqkcXXYh+s2k2LPF7eI2B76RHfow+btAM4H4Mp14f47J7gR8IRAxPt+21aYUOnHINFPPQfafCwIdxgyyZWP/VHD2VhKOSg8lBriuUur9koky/60QHaxmz+BCT0pV/shIwWf/7fiVaY6N3oktPvpvbRarAd8GF1R0ZHvaHKTz+ktuzG09RwAR6a5LKz5WWm8URq9fnExV8Rzljm+m3Io3w2lfIG8zGsk3gvvnTeY3WBWlqEMh6HitKk4ERkL4SH7Rn0+uznZWKpZsGMtp7nbDHbxRuk2zqcsf2CLdgeCXFNPSN9eiHQcbbgz8g6OeFOiFS34AUNVOeNmIM941RFdTFKVemnUcG6835rfmzYT4nMQgoFa5ArIScMj9yWzFCeqgEkdZ8RA++xJeSPUgYcyB8cJmTKJ+ZqQyARciURwWbRQPvndYcjLmn92GxJsWoiw6sPi5G/Z31NFGrbU0Njfm8rz/O5VNHVnDnKdXk/9IzGfVuIJHX0Sba16Mx49RmwycY9erNx7M0sfnfnBH0wxH8r3+/WEDyEBvCA900BSDioNq9EOT0/6yQtvH15/m9t5ZSwaXFNyrRUCSjbrOmHOj9/LdVpvjUIt+t5w6og5kHkHZImw7ukSHSqP110/JE7qGTxeursgPB3NEcMW5YTU8Pt9w56rmRvwG1IdQYZSEtC7kU/JhoADoF4LNMJq+PhY4WJ1Pm2D+++UYliFjdMTJtYz+pzWEu6tLxGf/uE1hgum5/BHa6FntxoHDe7dMdpWwMfhuD7IsOfLtesJ0NteKku4980zYNufTI+KlrRCmlz1k0Iwm9OfqSqThQYQptVDcXgsLTU8vLRgx0Klv5F6/CrTWpJ3aU8955+DB/S6/zWctq8VCWITPbW8ok/hQEI0V7u2wSY5E35GRXD2AWVMPp6RkTtU2vLpId8e46qztixTDm7bfnaFb07q35OHYbh9WIglqo53CbUIR0KHmNP+Q2kR7afYZxglK2U6YE2Np6cmSUNoVidDv4TzlJ0kT4m/evzYQsTpsq6QShS3hWlkojdfB2dSJIcPeuiJ/ZE5UyIktaEcyyERslh6eWq09Bo44A3Iq09/ckPRmqiGkGD41f2QPLArOPGS32j+Ppx5UWhduAGLuAQG0efogHa7G5SqCEoaH3y3pKESpxPEN+Yv+cOlmR48b353BCn3JV1zQu+r4JrVfcH7iNreXa7sFCmy9HPunP1wEVSnqa/LsPJEOWFJX1FjXrXv4Dft6n86wv4mIHLkCcd6RoZC80A7zpU4PrIblSXw5xmZg1qaQMDiSBIBwxUZuSSf06kQEk9c/HWFAHmCmag7nuB1Xy2QNNWzzfhQR7EdtSjV0FG2SDhFLPVvHYdHgvkegAHmhs0/hA5xOXbNa114fJEi7nci2n7dUsn/5mG+2UC4OCEtgrWi0eich71q4IdbRbsYfKA9np8Yu92+f3vnpIspioAyzhNNO5QwmkaZhCg1Omkz+6DWTb5ByQ4nQIGnZ60xMYC/Bu0I2JFRSlD0R28tWFmo/GhH9I1jfWrJEPy2g/JsKu0qSAAAAAAAAA" alt="" width="92" height="92"><div><b>Support NES</b><small>Support &amp; donations desk</small></div><button class="wa-x" aria-label="Close">&times;</button></div>
   <div class="wa-body">
-    <div class="wa-msg"><b>NES Team</b>Assalam o Alaikum! &#128075; Welcome to Nara Educational Society.</div>
-    <div class="wa-msg">How can we help you today? Ask about NES Tests, events, partnership or volunteering.</div>
+    <div class="wa-msg"><b>NES Team</b>Assalam o Alaikum! &#128156; Thank you for caring about education in Nara.</div>
+    <div class="wa-msg">Your support helps us run NES Tests, spelling bees and award ceremonies for rural students. Donate, sponsor a prize or volunteer: tell us how you would like to help.</div>
   </div>
   <div class="wa-foot">
-    <input type="text" placeholder="Type your message..." aria-label="Your message" maxlength="300">
-    <button class="wa-go" type="button"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Start chat on WhatsApp</button>
-    <div class="wa-num">WhatsApp: <a href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer">0301 3467491</a></div>
+    <input type="text" placeholder="Write how you want to support..." aria-label="Your message" maxlength="300">
+    <button class="wa-go" type="button"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Support / Donate via WhatsApp</button>
+    <div class="wa-num">WhatsApp: <a href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer">0301 3467491</a> &middot; <a href="donate.html">How to donate</a></div>
   </div>
 </div>
 <script>
@@ -470,7 +613,7 @@ footer a:hover{color:#fff;text-decoration:underline}
     $(".wa-x", pop).addEventListener("click", function () { setOpen(false); store.set("nes-wa", "1"); });
     var send = function () {
       var v = ($("input", pop).value || "").trim();
-      window.open(waLink(v || "Assalam o Alaikum! I would like to know more about Nara Educational Society."), "_blank", "noopener");
+      window.open(waLink(v || "Assalam o Alaikum! I would like to support / donate to Nara Educational Society."), "_blank", "noopener");
     };
     $(".wa-go", pop).addEventListener("click", send);
     $("input", pop).addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); send(); } });
@@ -497,29 +640,28 @@ footer a:hover{color:#fff;text-decoration:underline}
     });
   });
 
-  /* Contact form: send via WhatsApp or email */
-  var form = $("#contactForm");
-  if (form) {
-    var compose = function () {
-      var f = new FormData(form);
-      return {
-        name: (f.get("name") || "").toString().trim(),
-        phone: (f.get("phone") || "").toString().trim(),
-        topic: (f.get("topic") || "").toString(),
-        msg: (f.get("message") || "").toString().trim()
-      };
+  /* Forms (contact + join): send via WhatsApp or email */
+  $$("form[data-compose]").forEach(function (form) {
+    var kind = form.getAttribute("data-compose");
+    var text = function () {
+      var f = new FormData(form), lines = ["Assalam o Alaikum, " + kind + ":"];
+      f.forEach(function (v, k) { v = (v || "").toString().trim(); if (v) lines.push(k + ": " + v); });
+      return lines.join("\n");
     };
-    var text = function (d) {
-      return "Assalam o Alaikum, I am " + (d.name || "(name)") + ".\nTopic: " + d.topic + "\n" + d.msg + (d.phone ? "\nMy phone: " + d.phone : "");
-    };
-    var ok = function () { if (!form.reportValidity()) return null; return compose(); };
-    $("#sendWa").addEventListener("click", function () { var d = ok(); if (d) window.open(waLink(text(d)), "_blank", "noopener"); });
-    $("#sendMail").addEventListener("click", function () {
-      var d = ok(); if (!d) return;
-      location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("NES enquiry: " + d.topic) + "&body=" + encodeURIComponent(text(d));
+    $$("[data-send]", form).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (!form.reportValidity()) return;
+        if (btn.getAttribute("data-send") === "wa") window.open(waLink(text()), "_blank", "noopener");
+        else location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(kind) + "&body=" + encodeURIComponent(text());
+      });
     });
     form.addEventListener("submit", function (e) { e.preventDefault(); });
-  }
+  });
+
+  /* "More" dropdown: close on outside click */
+  document.addEventListener("click", function (e) {
+    $$("details.more[open]").forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute("open"); });
+  });
 
   /* Gallery: filter + lightbox */
   var chips = $$(".chip[data-f]");

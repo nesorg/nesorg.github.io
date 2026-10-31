@@ -1,116 +1,169 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nara Educational Society (NES) | Education Builds a Brighter Future</title>
-<meta name="description" content="Nara Educational Society (NES) - education, leadership, scholarships and community development in Sindh, Pakistan.">
-<meta name="theme-color" content="#14315f"><link rel="icon" href="logo.png">
-<style>
-:root{--navy:#14315f;--blue:#2a7fc4;--sky:#e8f3fb;--ink:#1b2c47;--muted:#5d6f88;--line:#dde7f1;--gold:#f0b549}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff}
-h1,h2,h3{color:var(--navy);line-height:1.2;margin:0 0 12px}a{color:var(--blue);text-decoration:none}img{max-width:100%}
-.w{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;line-height:1.1}.brand img{width:46px;height:46px;object-fit:contain}.brand small{display:block;font-size:.6rem;letter-spacing:.08em;color:var(--blue)}
-nav{display:flex;gap:4px}nav a{padding:8px 11px;border-radius:8px;font-weight:600;font-size:.88rem;color:#3c4e67}nav a.on,nav a:hover{background:var(--sky);color:var(--navy)}
-#mb{display:none;background:var(--sky);border:0;border-radius:10px;width:42px;height:42px;font-size:1.3rem;color:var(--navy)}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;border:2px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;font-size:.95rem}
-.btn.o{background:transparent;color:var(--navy)}.btn.g{background:#25d366;border-color:#25d366;color:#fff}.btn:hover{opacity:.9}
-.hero{background:linear-gradient(135deg,#0f2850,#2a7fc4);color:#fff;padding:64px 0}
-.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.5rem)}.hero p{opacity:.92;max-width:540px}.hero .btn{margin:6px 8px 0 0}.hero .btn.o{border-color:#fff;color:#fff}.hero .btn:not(.o){background:#fff;color:var(--navy);border-color:#fff}
-.hero img{background:#fff;border-radius:24px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,.25);justify-self:center;max-height:340px}
-.sec{padding:56px 0}.soft{background:var(--sky)}.eye{color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 8px 26px rgba(20,49,95,.06)}
-.card .ic{font-size:1.8rem}.card h3{font-size:1.1rem}.card p{margin:0 0 8px;color:var(--muted);font-size:.95rem}
-.tag{display:inline-block;background:var(--sky);color:var(--navy);border-radius:999px;padding:2px 12px;font-size:.78rem;font-weight:700;margin-bottom:8px}
-.meta{font-size:.85rem;color:var(--muted)}
-.ann{background:#fff8e6;border-bottom:1px solid #f4dfa6;padding:10px 0;font-size:.92rem}
-.ph{background:linear-gradient(135deg,#0f2850,#2a7fc4);color:#fff;padding:44px 0}.ph h1{color:#fff;margin:0;font-size:clamp(1.8rem,4vw,2.7rem)}.ph p{margin:6px 0 0;opacity:.9}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-input,select{padding:11px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;width:100%}
-.filters{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-bottom:20px}
-.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:34px;border:2px dashed var(--line);border-radius:16px}
-.av{width:78px;height:78px;border-radius:50%;object-fit:cover;background:var(--sky);display:grid;place-items:center;font-size:1.8rem;margin-bottom:10px}
-footer{background:var(--navy);color:#cfdcf0;padding:40px 0 20px}footer a{color:#fff}footer .grid{grid-template-columns:2fr 1fr 1fr}
-footer h4{color:#fff;margin:0 0 8px}footer .cr{border-top:1px solid #2b4a7c;margin-top:24px;padding-top:14px;font-size:.85rem;text-align:center}
-.page{display:none}.page.on{display:block}
-@media(max-width:860px){nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 4%;border-bottom:1px solid var(--line)}nav.open{display:flex}#mb{display:block}
-.hero .w,.two,footer .grid,.filters{grid-template-columns:1fr}.hero img{max-height:220px}}
-</style></head><body>
-<header><div class="w bar"><a class="brand" href="#home"><img src="logo.png" alt="NES logo"><span>NARA EDUCATIONAL SOCIETY<small>EDUCATION BUILDS A BRIGHTER FUTURE</small></span></a>
-<button id="mb" aria-label="Menu">☰</button>
-<nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#programs">Programs</a><a href="#events">Events</a><a href="#opportunities">Opportunities</a><a href="#team">Team</a><a href="#news">News</a><a href="#contact">Contact</a></nav></div></header>
-<div id="ann"></div>
-<main>
-<section class="page" id="p-home"><div class="hero"><div class="w"><div><span class="eye" style="color:#bfe0f7">Nara Educational Society</span><h1>Empowering minds. Inspiring futures.</h1><p>NES connects students, educators and volunteers through education, leadership, opportunities and community service.</p><a class="btn" href="#join" data-join="member">Become a Member</a><a class="btn o" href="#programs">Our Programs</a></div><img src="logo.png" alt="Nara Educational Society logo"></div></div>
-<div class="sec"><div class="w"><span class="eye">Our focus</span><h2>Programs with a purpose</h2><div class="grid" id="h-prog"></div></div></div>
-<div class="sec soft"><div class="w"><span class="eye">Stay connected</span><h2>Upcoming events</h2><div class="grid" id="h-ev"></div><p><a href="#events">All events →</a></p></div></div>
-<div class="sec"><div class="w"><span class="eye">Latest</span><h2>Opportunities</h2><div class="grid" id="h-op"></div><p><a href="#opportunities">All opportunities →</a></p></div></div>
-<div class="sec soft"><div class="w two"><div class="card"><div class="ic">🎓</div><h3>Represent your campus</h3><p>Become an NES University Ambassador and share verified opportunities with students.</p><a class="btn o" href="#join" data-join="ambassador">Apply as Ambassador</a></div><div class="card"><div class="ic">🤲</div><h3>Volunteer with us</h3><p>Help with events, communication, education and community activities.</p><a class="btn o" href="#join" data-join="volunteer">Join as Volunteer</a></div></div></div></section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nara Educational Society | Education Builds a Brighter Future in Nara, Sindh</title>
+<meta name="description" content="Nara Educational Society is a community-driven non-profit in Nara, Sindh that runs talent hunts, NES Tests, spelling bees and award ceremonies to build confidence in rural students.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Nara Educational Society">
+<meta name="geo.region" content="PK-SD">
+<meta name="geo.placename" content="Nara, Sindh, Pakistan">
+<meta name="theme-color" content="#0a2e6e">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nara Educational Society">
+<meta property="og:title" content="Nara Educational Society | Education Builds a Brighter Future in Nara, Sindh">
+<meta property="og:description" content="Nara Educational Society is a community-driven non-profit in Nara, Sindh that runs talent hunts, NES Tests, spelling bees and award ceremonies to build confidence in rural students.">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "NGO", "name": "Nara Educational Society", "alternateName": "NES", "description": "A community-driven non-profit working to raise educational standards and confidence among youth in the Nara desert area of Sindh, Pakistan.", "slogan": "Education builds a brighter future", "email": "naraedusociety@gmail.com", "telephone": "+923013467491", "logo": "images/logo.png", "image": "images/logo.png", "address": {"@type": "PostalAddress", "addressLocality": "Nara", "addressRegion": "Sindh", "addressCountry": "PK"}, "areaServed": "Nara, Sindh, Pakistan"}</script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="Nara Educational Society home">
+      <span class="mark"><img src="images/emblem.png" alt="Nara Educational Society emblem" width="96" height="96"></span>
+      <span>Nara <b>Educational</b> Society<small>Education builds a brighter future</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation"><a href="index.html" class=on aria-current=page>Home</a><a href="about.html">About Us</a><a href="team.html">Team</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="gallery.html">Gallery</a><a href="partnership.html">Partnership</a><a href="contact.html">Contact Us</a></nav>
+    <div class="hdr-icons">
+      <a class="ib wa" href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      <button class="menubtn" id="menuBtn" aria-expanded="false" aria-controls="panel" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2.2H3zM3 11h18v2.2H3zM3 16h18v2.2H3z"/></svg><span>Menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="panel" aria-label="All pages"><div class="pg"><a href="index.html" class=on><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-10.5z"/></svg><span>Home</span></a><a href="about.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>About Us</span></a><a href="team.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Team</span></a><a href="events.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span>Events</span></a><a href="announcements.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Announcements</span></a><a href="gallery.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Gallery</span></a><a href="partnership.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Partnership</span></a><a href="contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Contact Us</span></a></div></div>
+</header>
+<div class="ticker">
+  <div class="ticker-in">
+    <div class="ticker-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Announcements</span></div>
+    <div class="ticker-view" id="tickerView" role="button" tabindex="0" aria-pressed="false" aria-label="Latest announcements. Tap to pause or resume">
+      <div class="ticker-track"><span class="ticker-item"><b>NES Test</b>NES Tests: regional academic assessments for students</span><span class="ticker-item"><b>Event</b>Spelling bee and award ceremony at Iqra Public School</span><span class="ticker-item"><b>Award Ceremony</b>Position holders honoured at Government Degree College Choondiko</span><span class="ticker-item"><b>Talent Hunt</b>Regional talent hunt programs for young people of Nara</span><span class="ticker-item"><b>Notice</b>Schools, sponsors and volunteers: join us</span><span class="ticker-item"><b>NES Test</b>NES Tests: regional academic assessments for students</span><span class="ticker-item"><b>Event</b>Spelling bee and award ceremony at Iqra Public School</span><span class="ticker-item"><b>Award Ceremony</b>Position holders honoured at Government Degree College Choondiko</span><span class="ticker-item"><b>Talent Hunt</b>Regional talent hunt programs for young people of Nara</span><span class="ticker-item"><b>Notice</b>Schools, sponsors and volunteers: join us</span></div>
+    </div>
+    <a class="ticker-all" href="announcements.html">All</a>
+  </div>
+</div>
 
-<section class="page" id="p-about"><div class="ph"><div class="w"><h1>About NES</h1><p>Who we are and what we stand for.</p></div></div>
-<div class="sec"><div class="w"><h2>Education is more than a classroom</h2><p>Nara Educational Society is an educational and youth-development initiative focused on academic opportunity, practical skills, leadership and social responsibility. By connecting students, educators, professionals and volunteers, NES builds a supportive environment for learning and growth.</p>
-<div class="two" style="margin-top:20px"><div class="card"><h3>🎯 Our Vision</h3><p>An educated, empowered, skilled and socially responsible generation that contributes to a progressive society.</p></div><div class="card"><h3>✦ Our Mission</h3><p>To promote educational opportunities, nurture young talent, strengthen leadership and support career readiness.</p></div></div></div></div>
-<div class="sec soft"><div class="w"><h2>Our values</h2><div class="grid"><div class="card"><h3>📖 Knowledge</h3><p>Continuous learning and curiosity.</p></div><div class="card"><h3>🛡 Integrity</h3><p>Honesty and accountability.</p></div><div class="card"><h3>🤲 Inclusivity</h3><p>Respect for every background.</p></div><div class="card"><h3>💡 Innovation</h3><p>Creative thinking and better solutions.</p></div><div class="card"><h3>🤝 Collaboration</h3><p>Working together with shared purpose.</p></div><div class="card"><h3>♥ Service</h3><p>Giving time and skills for others.</p></div></div></div></div></section>
+<main id="main">
+<div class="hero split">
+  <div>
+    <span class="eyebrow"><span class="dot"></span> Nara Educational Society &bull; Nara, Sindh</span>
+    <h1 class="hero-title">Education builds a brighter future for the youth of Nara.</h1>
+    <p class="lead">We are a local, community-driven non-profit raising educational standards and confidence among young people in the remote Nara desert, through talent hunts, NES Tests and student competitions.</p>
+    <div class="btns">
+      <a class="btn" href="about.html">About Us &rarr;</a>
+      <a class="btn alt" href="events.html">Our Events</a>
+      <a class="btn alt" href="partnership.html">Partner With Us</a>
+      <a class="btn wa" href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-logo"><img src="images/logo.png" alt="Nara Educational Society logo: Education builds a brighter future" width="554" height="554"></div>
+</div>
 
-<section class="page" id="p-programs"><div class="ph"><div class="w"><h1>Our Programs</h1><p>Opportunities to learn, lead and contribute.</p></div></div>
-<div class="sec"><div class="w"><div class="grid" id="a-prog"></div></div></div>
-<div class="sec soft"><div class="w card"><span class="eye">Flagship initiative</span><h2>Nara Talent Hunt</h2><p>An academic initiative to recognize and encourage young talent through fair competitions, certificates and educational support. Schedules and eligibility will be announced officially.</p><a class="btn" href="#join" data-join="talent">Ask about Talent Hunt</a></div></div></section>
+<div class="sec"><div><h2>What We Do</h2><p class=sub>Programmes that help rural students speak, compete and shine.</p></div><a class="sec-link" href="events.html">All events &rarr;</a></div>
 
-<section class="page" id="p-events"><div class="ph"><div class="w"><h1>Events</h1><p>Seminars, workshops and competitions.</p></div></div><div class="sec"><div class="w"><div class="grid" id="a-ev"></div></div></div></section>
+<div class="browse"><div class="grid">
+  <a class="tile" href="events.html#talent" style="--ic:#059669"><span class="tile-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><h3>Talent Hunt Programs</h3><p>Regional programs that discover and encourage hidden talent.</p><span class="tile-view">View &rarr;</span></a>
+  <a class="tile" href="events.html#nes-tests" style="--ic:#3b82f6"><span class="tile-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span><h3>NES Tests</h3><p>Regional academic assessment evaluations for students.</p><span class="tile-view">View &rarr;</span></a>
+  <a class="tile" href="events.html#spelling" style="--ic:#f59e0b"><span class="tile-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10a7 7 0 0 1-14 0M12 17v5M8 22h8"/></svg></span><h3>Spelling Bees</h3><p>Healthy competition that builds language fluency.</p><span class="tile-view">View &rarr;</span></a>
+  <a class="tile" href="events.html#awards" style="--ic:#8b5cf6"><span class="tile-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span><h3>Award Ceremonies</h3><p>Celebrating position holders at their own schools.</p><span class="tile-view">View &rarr;</span></a>
+</div></div>
 
-<section class="page" id="p-opportunities"><div class="ph"><div class="w"><h1>Opportunities</h1><p>Scholarships, internships, jobs, training and admissions.</p></div></div>
-<div class="sec"><div class="w"><div class="filters"><input id="q" placeholder="Search opportunities..."><select id="cat"><option value="">All categories</option><option>Scholarship</option><option>Internship</option><option>Job</option><option>Training</option><option>Competition</option><option>Admission</option></select></div><div class="grid" id="a-op"></div></div></div></section>
+<div class="sec"><div><h2>About the Society</h2></div></div>
 
-<section class="page" id="p-team"><div class="ph"><div class="w"><h1>Our Team</h1><p>People dedicated to education and community.</p></div></div><div class="sec"><div class="w"><div class="grid" id="a-team"></div></div></div></section>
+<div class="cols">
+  <div class="card"><h3>Who we are</h3><p><b>Nara Educational Society (NES)</b> is a community-driven non-profit based in the Nara desert of Sindh, Pakistan. We work to lift the educational standards and self-confidence of young people growing up in remote villages.</p><p>Through regional talent hunts, academic assessments and competitions, we give rural students a stage to show what they can do.</p>
+  <div class="btns" style="margin-top:14px"><a class="btn" href="about.html">Read Our Story &rarr;</a></div></div>
+  <div class="card"><h3>Our core goal</h3><ul class="ticks"><li>Promote language fluency among students</li><li>Foster healthy academic competition</li><li>Build confidence in underserved rural students</li><li>Celebrate every position holder at their own school</li></ul></div>
+</div>
 
-<section class="page" id="p-news"><div class="ph"><div class="w"><h1>News & Announcements</h1><p>Latest updates from NES.</p></div></div><div class="sec"><div class="w"><div class="grid" id="a-news"></div></div></div></section>
+<div class="sec"><div><h2>Founder &amp; Chief Patron</h2></div></div>
 
-<section class="page" id="p-join"><div class="ph"><div class="w"><h1>Join NES</h1><p>Become a member, volunteer or ambassador.</p></div></div>
-<div class="sec"><div class="w two"><div class="card"><h3>Join our community</h3><p>Tap a button below. A WhatsApp message will open so the NES team can reply to you directly.</p><p><a class="btn g" href="#" data-join="member">Membership</a> <a class="btn g" href="#" data-join="volunteer">Volunteer</a> <a class="btn g" href="#" data-join="ambassador">Ambassador</a></p><p><a class="btn o" href="#" id="grp" style="display:none">Open WhatsApp Group</a></p></div><div class="card"><h3>What you get</h3><p>Verified scholarship and admission updates, workshops, leadership experience and certificates for qualifying contributions.</p></div></div></div></section>
+<div class="card spot">
+  <div class="ph"><img src="images/niaz-ali.jpg" alt="Niaz Ali, Founder and Chief Patron of Nara Educational Society" width="320" height="320" loading="lazy"></div>
+  <div>
+    <span class="pill solid">Chief Patron</span>
+    <h3 style="margin-top:8px">Niaz Ali</h3>
+    <p>Niaz Ali is the Chief Patron and guiding force behind Nara Educational Society. He believes that every child in the Nara desert deserves the same chance to learn, speak with confidence and dream big, and he supports the society's talent hunts, NES Tests and award ceremonies.</p>
+    <div class="btns"><a class="btn" href="team.html">Meet the Team &rarr;</a></div>
+  </div>
+</div>
 
-<section class="page" id="p-contact"><div class="ph"><div class="w"><h1>Contact NES</h1><p>Partnerships, programs, volunteering and questions.</p></div></div>
-<div class="sec"><div class="w two"><div class="card"><h3>Reach us</h3><p>📍 <span id="c-loc"></span></p><p>✉ <span id="c-mail">Email to be announced</span></p><p><a class="btn g" href="#" data-join="contact">Message on WhatsApp</a></p></div><div class="card"><h3>Follow NES</h3><p id="c-soc">Social links to be announced.</p></div></div></div></section>
+<div class="sec"><div><h2>Our Leadership</h2></div><a class="sec-link" href="team.html">Full team &rarr;</a></div>
+
+<div class="team"><div class="person lead-card"><div class="ph"><img src="images/niaz-ali.jpg" alt="Niaz Ali, Chief Patron of Nara Educational Society" width="320" height="320" loading="lazy"></div>
+<p class="role">Chief Patron</p><h3>Niaz Ali</h3><p>Guiding the society's vision for the youth of Nara.</p></div><div class="person"><div class="ph"><img src="images/ghulam-hussain.jpg" alt="Ghulam Hussain, President of Nara Educational Society" width="320" height="320" loading="lazy"></div>
+<p class="role">President</p><h3>Ghulam Hussain</h3><p>Leads the society's programmes and works with schools, colleges and communities.</p></div><div class="person"><div class="ph"><img src="images/sajid-ali.jpg" alt="Sajid Ali, General Secretary of Nara Educational Society" width="320" height="320" loading="lazy"></div>
+<p class="role">General Secretary</p><h3>Sajid Ali</h3><p>Manages communication, records and scheduling for all society activities.</p></div></div>
+
+<div class="sec"><div><h2>Latest Announcements</h2></div><a class="sec-link" href="announcements.html">All announcements &rarr;</a></div>
+
+<div class="stack"><div class="ann"><span class="ann-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span><div><span class="pill">NES Test</span><h3>NES Tests: regional academic assessments for students</h3><p>Nara Educational Society conducts regional academic assessment evaluations, known as NES Tests, to measure learning and recognise hard-working students across the Nara area.</p></div></div><div class="ann"><span class="ann-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10a7 7 0 0 1-14 0M12 17v5M8 22h8"/></svg></span><div><span class="pill">Event</span><h3>Spelling bee and award ceremony at Iqra Public School</h3><p>A spelling bee and award ceremony was organised at Iqra Public School, Village Allah Bux Jamro, to celebrate the students who secured positions.</p></div></div><div class="ann"><span class="ann-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span><div><span class="pill">Award Ceremony</span><h3>Position holders honoured at Government Degree College Choondiko</h3><p>Students who secured positions were celebrated at an award ceremony held at Government Degree College Choondiko.</p></div></div></div>
+
+<div class="sec"><div><h2>Contact Card</h2></div></div>
+
+<div class="contact-card">
+  <img src="images/emblem.png" alt="Nara Educational Society" width="220" height="220">
+  <div>
+    <h3>Nara Educational Society</h3>
+    <p>Nara, Sindh, Pakistan &middot; Education builds a brighter future</p>
+    <div class="lines"><a href="tel:+923013467491">&#9742; 0301 3467491 (WhatsApp)</a><a href="mailto:naraedusociety@gmail.com">&#9993; naraedusociety@gmail.com</a></div>
+    <div class="btns"><a class="btn wa" href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a><a class="btn alt" href="mailto:naraedusociety@gmail.com">Send Email</a><button class="btn alt" type="button" data-vcard>Save Contact</button></div>
+  </div>
+</div>
+
+
+<div class="cta">
+  <div><h2>Be part of the change</h2><p>Schools, sponsors, volunteers and well-wishers are welcome to partner with us to bring more opportunities to the children of Nara.</p></div>
+  <div class="btns"><a class="btn wa" data-wa="Assalam o Alaikum! I would like to know more about Nara Educational Society." href="https://wa.me/923013467491"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a><a class="btn" href="contact.html">Contact Us &rarr;</a></div>
+</div>
+
 </main>
-<footer><div class="w"><div class="grid"><div><h4>Nara Educational Society</h4><p>Education builds a brighter future.</p></div><div><h4>Explore</h4><a href="#about">About</a><br><a href="#programs">Programs</a><br><a href="#events">Events</a><br><a href="#team">Team</a></div><div><h4>Get involved</h4><a href="#join">Join NES</a><br><a href="#opportunities">Opportunities</a><br><a href="#contact">Contact</a></div></div>
-<div class="cr">© 2026 Nara Educational Society. <b style="color:#7cc0f2">Designed by NES Team</b></div></div></footer>
-<script src="data.js"></script>
-<script>
-const D=window.NES_DATA||{},S=D.settings||{},$=s=>document.querySelector(s),L=k=>D[k]||[];
-const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const safe=u=>/^https?:\/\//i.test(u||"")?u:"";
-const fd=d=>{const x=new Date(d);return isNaN(x)?esc(d||""):x.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})};
-const empty=m=>`<div class="empty">${m}</div>`;
-const link=(u,t)=>safe(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${t} ↗</a>`:"";
-const progC=p=>`<div class="card"><div class="ic">${esc(p.icon)}</div><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></div>`;
-const evC=e=>`<div class="card"><span class="tag">${fd(e.date)}</span><h3>${esc(e.title)}</h3><p>${esc(e.description)}</p><div class="meta">${esc([e.time,e.venue].filter(Boolean).join(" • "))}</div>${link(e.link,"Details")}</div>`;
-const opC=o=>`<div class="card"><span class="tag">${esc(o.category)}</span><h3>${esc(o.title)}</h3><p>${esc(o.description)}</p><div class="meta">${esc(o.organization||"")}${o.deadline?" • Deadline: "+fd(o.deadline):""}</div>${link(o.link,"Apply / Details")}</div>`;
-const list=(a,f,m,n)=>(a.length?a.slice(0,n||99).map(f).join(""):empty(m));
-const sorted=a=>[...a].sort((x,y)=>String(x.date||x.deadline||"").localeCompare(String(y.date||y.deadline||"")));
-function opSearch(){const q=$("#q").value.toLowerCase(),c=$("#cat").value;
- const r=L("opportunities").filter(o=>(!c||o.category===c)&&(!q||JSON.stringify(o).toLowerCase().includes(q)));
- $("#a-op").innerHTML=list(r,opC,"No opportunities found. Check back soon.")}
-$("#h-prog").innerHTML=list(L("programs").slice(0,4),progC);$("#a-prog").innerHTML=list(L("programs"),progC,"Programs coming soon.");
-$("#h-ev").innerHTML=list(sorted(L("events")),evC,"Event announcements are coming soon.",3);$("#a-ev").innerHTML=list(sorted(L("events")),evC,"No events published yet.");
-$("#h-op").innerHTML=list(L("opportunities"),opC,"Opportunities will be published here.",3);opSearch();$("#q").oninput=$("#cat").onchange=opSearch;
-$("#a-team").innerHTML=list(L("team"),t=>`<div class="card">${safe(t.photo)?`<img class="av" src="${esc(t.photo)}" alt="${esc(t.name)}">`:`<div class="av">👤</div>`}<h3>${esc(t.name)}</h3><span class="tag">${esc(t.role)}</span><p>${esc(t.bio)}</p></div>`,"Team profiles will be published soon.");
-$("#a-news").innerHTML=list([...L("news")].reverse(),n=>`<div class="card"><span class="tag">${fd(n.date)}</span><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p></div>`,"No news yet.");
-const an=L("announcements");$("#ann").innerHTML=an.length?`<div class="ann"><div class="w">📢 <b>${esc(an[an.length-1].title)}</b> - ${esc(an[an.length-1].text)}</div></div>`:"";
-$("#c-loc").textContent=S.location||"Sindh, Pakistan";
-if(S.email){$("#c-mail").innerHTML=`<a href="mailto:${esc(S.email)}">${esc(S.email)}</a>`}
-const soc=[["facebook","Facebook"],["youtube","YouTube"],["instagram","Instagram"]].filter(x=>safe(S[x[0]])).map(x=>link(S[x[0]],x[1]));
-if(soc.length)$("#c-soc").innerHTML=soc.join(" &nbsp; ");
-const msg={member:"Assalam o Alaikum, I want to become a member of Nara Educational Society.",volunteer:"Assalam o Alaikum, I want to volunteer with Nara Educational Society.",ambassador:"Assalam o Alaikum, I want to apply as an NES University Ambassador.",talent:"Assalam o Alaikum, please share details about Nara Talent Hunt.",contact:"Assalam o Alaikum, I have a question for Nara Educational Society."};
-const num=String(S.whatsapp||"").replace(/\D/g,"");
-document.querySelectorAll("[data-join]").forEach(a=>a.addEventListener("click",e=>{
- if(num){e.preventDefault();window.open("https://wa.me/"+num+"?text="+encodeURIComponent(msg[a.dataset.join]),"_blank")}
- else if(safe(S.whatsappGroup)){e.preventDefault();window.open(S.whatsappGroup,"_blank")}
- else if(a.getAttribute("href")==="#"){e.preventDefault();alert("Contact details will be announced soon.")}}));
-if(safe(S.whatsappGroup)){const g=$("#grp");g.href=S.whatsappGroup;g.target="_blank";g.style.display="inline-block"}
-function route(){let h=(location.hash||"#home").slice(1);if(!$("#p-"+h))h="home";
- document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.id==="p-"+h));
- document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h));
- $("#nav").classList.remove("open");scrollTo(0,0)}
-addEventListener("hashchange",route);route();$("#mb").onclick=()=>$("#nav").classList.toggle("open");
-</script></body></html>
+
+<footer>
+  <div class="glass">
+    <div class="foot-brand"><img src="images/emblem.png" alt="" width="112" height="112"><div><b>Nara Educational Society</b><br><span>Education builds a brighter future.</span></div></div>
+    <p style="font-size:14px;margin-top:6px">A local, community-driven non-profit working to raise educational standards and confidence among the youth of the Nara desert, Sindh, Pakistan.</p>
+    <div class="footer-columns">
+      <section><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Team</a></li><li><a href="events.html">Events</a></li></ul></section>
+      <section><h3>More</h3><ul><li><a href="announcements.html">Announcements</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="partnership.html">Partnership</a></li><li><a href="contact.html">Contact Us</a></li></ul></section>
+      <section><h3>Contact Information</h3>
+        <div class="footer-contact">
+          <a href="tel:+923013467491">&#9742; 0301 3467491</a>
+          <a href="mailto:naraedusociety@gmail.com">&#9993; naraedusociety@gmail.com</a>
+          <span>&#128205; Nara, Sindh, Pakistan</span>
+        </div></section>
+      <section><h3>Connect</h3>
+        <div class="footer-social">
+          <a href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="mailto:naraedusociety@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5zm2.2.5L12 12l7.8-6zM20 7.7l-8 6.2-8-6.2V18h16z"/></svg></a>
+        </div></section>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Nara Educational Society. All rights reserved.</p><p>We respect your privacy and never sell or misuse personal information.</p></div>
+  </div>
+</footer>
+
+<button class="wa-fab" id="waFab" aria-label="Chat with Nara Educational Society on WhatsApp" aria-expanded="false" aria-controls="waPop"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="badge">1</span></button>
+<div class="wa-pop" id="waPop" role="dialog" aria-label="WhatsApp chat">
+  <div class="wa-head"><img src="images/emblem.png" alt="" width="92" height="92"><div><b>Nara Educational Society</b><small>Typically replies within a day</small></div><button class="wa-x" aria-label="Close chat">&times;</button></div>
+  <div class="wa-body">
+    <div class="wa-msg"><b>NES Team</b>Assalam o Alaikum! &#128075; Welcome to Nara Educational Society.</div>
+    <div class="wa-msg">How can we help you today? Ask about NES Tests, events, partnership or volunteering.</div>
+  </div>
+  <div class="wa-foot">
+    <input type="text" placeholder="Type your message..." aria-label="Your message" maxlength="300">
+    <button class="wa-go" type="button"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Start chat on WhatsApp</button>
+    <div class="wa-num">WhatsApp: <a href="https://wa.me/923013467491" target="_blank" rel="noopener noreferrer">0301 3467491</a></div>
+  </div>
+</div>
+<script src="js/main.js" defer></script>
+</body>
+</html>

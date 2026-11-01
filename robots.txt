@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /CMS-Admin.html
+Disallow: /admin.html
